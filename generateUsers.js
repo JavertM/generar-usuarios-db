@@ -4,6 +4,7 @@ const path = require('path');
 const process = require('process');
 const numberOfUserToCreate = 521; // Número de usuarios a generar
 const fileNameOutput = 'test_users.csv'; // Nombre del archivo de salida con los usuarios generados
+const defaultTestPassword = 'PassWord123!'; // Contraseña común para todos los usuarios de prueba'
 
 // --- Funciones Auxiliares ---
 
@@ -53,7 +54,7 @@ async function generateTestUsers(numUsers) {
         const phoneNumber = generatePhoneNumber(); 
 
         // Contraseña simple para la prueba
-        const plainPassword = "password123!"; 
+        const plainPassword = defaultTestPassword; 
 
         // Generar hash bcrypt de forma asíncrona
         const passwordHash = await bcrypt.hash(plainPassword, saltRounds);
