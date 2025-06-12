@@ -36,3 +36,4 @@ recursos_locales/
 
 # Archivo para preparar textos para ChatGPT
 **/prompts-chatgpt.md
+**/test_users.csv
